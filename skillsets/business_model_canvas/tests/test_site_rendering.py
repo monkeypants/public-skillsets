@@ -20,7 +20,7 @@ from bin.cli.dtos import (
 
 CLIENT = "acme-corp"
 
-_REPO_ROOT = Path(__file__).resolve().parent.parent.parent.parent
+_REPO_ROOT = Path(__file__).resolve().parent.parent.parent.parent.parent.parent.parent
 
 
 def _write(path: Path, content: str) -> None:
@@ -58,7 +58,6 @@ def rendered_site(tmp_path_factory):
     config = Config(
         repo_root=_REPO_ROOT,
         workspace_root=tmp_path / "clients",
-        skillsets_root=tmp_path / "skillsets",
     )
     container = Container(config)
 

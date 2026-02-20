@@ -23,7 +23,7 @@ from wardley_mapping.types import TourStop
 
 CLIENT = "acme-corp"
 
-_REPO_ROOT = Path(__file__).resolve().parent.parent.parent.parent
+_REPO_ROOT = Path(__file__).resolve().parent.parent.parent.parent.parent.parent.parent
 
 MINIMAL_SVG = (
     '<svg xmlns="http://www.w3.org/2000/svg" width="100" height="100">'
@@ -102,7 +102,6 @@ def rendered_site(tmp_path_factory):
     config = Config(
         repo_root=_REPO_ROOT,
         workspace_root=tmp_path / "clients",
-        skillsets_root=tmp_path / "skillsets",
     )
     container = Container(config)
 

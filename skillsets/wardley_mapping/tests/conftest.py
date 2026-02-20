@@ -12,7 +12,7 @@ from practice.entities import Project, ProjectStatus
 from wardley_mapping.infrastructure import JsonTourManifestRepository
 from wardley_mapping.types import TourManifest, TourStop
 
-_REPO_ROOT = Path(__file__).resolve().parent.parent.parent.parent
+_REPO_ROOT = Path(__file__).resolve().parent.parent.parent.parent.parent.parent.parent
 
 DEFAULT_CLIENT = "holloway-group"
 DEFAULT_PROJECT = "maps-1"
@@ -31,7 +31,6 @@ def tmp_config(tmp_path):
     return Config(
         repo_root=_REPO_ROOT,
         workspace_root=tmp_path / "clients",
-        skillsets_root=tmp_path / "skillsets",
     )
 
 
