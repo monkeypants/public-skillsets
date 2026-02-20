@@ -40,9 +40,8 @@ where the BC package will be created:
 
 | Source | Location | Notes |
 |--------|----------|-------|
-| commons | `commons/{bc_package}/` | Committed to repo, always available |
-| personal | `personal/{bc_package}/` | Operator-private, always available |
-| partnership | `partnerships/{slug}/{bc_package}/` | Per-engagement access control |
+| personal | `personal/skillsets/{bc_package}/` | Operator-private, always available |
+| partnership | `partnerships/{slug}/skillsets/{bc_package}/` | Per-engagement access control |
 
 The implementation process is the same regardless of source — all
 three produce a full BC package with `__init__.py` exporting SKILLSETS,
@@ -81,7 +80,6 @@ This creates:
 - `{bc_package}/presenter.py` stub
 - `{bc_package}/tests/__init__.py`
 - `{bc_package}/tests/test_presenter.py`
-- Entry in `pyproject.toml` packages list
 
 If the package already exists (e.g. from a prospectus), verify its
 structure matches the scaffold output and update as needed.
